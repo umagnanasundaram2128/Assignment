@@ -8,7 +8,7 @@ void swap(int i,int j)
 }
 int main()
 {
-	int i,j,m,n;
+	int i,j,n;
 	printf("Enter the order of matrix 'n':");
 	scanf("%d",&n);
 	printf("Enter the matrix elements:");
