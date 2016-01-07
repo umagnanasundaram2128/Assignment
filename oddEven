@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int row,i,j,odd=1,even=2;
+	printf("Enter the number of rows:");
+    scanf("%d",&row);
+    for(i=1;i<=row;i=i+2)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",odd);
+            odd=odd+2;
+        }
+        printf("\n");
+        for(j=1;j<=(i+1);j++)
+        {
+            printf("%d ",even);
+            even=even+2;
+        }
+        printf("\n");
+	}
+	return 0;
+}		
