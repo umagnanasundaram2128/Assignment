@@ -21,5 +21,11 @@ int main()
 		}
 		printf("\n");
 	}
+	//deallocating memory 
+	for(i=0;i<=row;i++)
+	{
+		free(array[i]);
+	}	
+	free(array);	
 	return 0;
 }
