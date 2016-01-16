@@ -78,12 +78,12 @@ int check(int array[][3])
 					flag=1;
    	            			break;
 				}
-  	       	}
-   	       	else
-   	       	{
+  	       		}
+   		 	else
+   	       		{
    	           		flag=0;
    	           		break;
-   	       	}
+   		  	}
 		}
 	}
 	return flag;
