@@ -76,7 +76,7 @@ int check(int array[][3])
    	            if(num==9)	
 				{
 					flag=1;
-   	            	break;
+   	            			break;
 				}
    	        }
    	        else
