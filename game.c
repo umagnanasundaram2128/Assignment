@@ -71,19 +71,19 @@ int check(int array[][3])
 		for(j=0;j<3;j++)
 		{	
 			if(array[i][j]==num)
-   	        {
-   	            num++;
-   	            if(num==9)	
+   			{
+   	        		num++;
+   	        		if(num==9)	
 				{
 					flag=1;
    	            			break;
 				}
-   	        }
-   	        else
-   	        {
-   	            flag=0;
-   	            break;
-   	        }
+   	        	}
+   	        	else
+   	        	{
+   	            		flag=0;
+   	            		break;
+   	        	}
 		}
 	}
 	return flag;
