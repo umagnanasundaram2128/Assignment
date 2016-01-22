@@ -1,7 +1,7 @@
 #include<stdio.h>
 void rev(int num)
 {
-	int remainder,rev_num;
+	int remainder,rev_num=0;
 	while(num>0)
 	{
 		remainder=num%10;
