@@ -13,7 +13,7 @@ int main()
 	int strength=0,i,j,max;
 	char ch;
 	FILE *fp;
-	fp=fopen("final.csv","r");
+	fp=fopen("marklist.csv","r");
 	if(fp!=NULL)
 	{
 		ch=fgetc(fp);
