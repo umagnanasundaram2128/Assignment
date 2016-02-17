@@ -10,20 +10,20 @@ int main()
 	switch(type[0])
 	{
 		case 'A':
-		case 'a':for(i=0;i<n;i++)
+		case 'a':	for(i=0;i<n;i++)
 				 {
 					printf("%d,",s);
 					s=s+d;
 				 }
 				 break;
 		case 'G':
-		case 'g':for(i=0;i<n;i++)
+		case 'g':	for(i=0;i<n;i++)
 				 {
 					printf("%d,",s);
 					s=s*d;
 				 }
 				 break;
-		default:printf("Invalid type");
+		default:	printf("Invalid type");
 	}
 	printf("\b");
 	return 0;
