@@ -2,8 +2,11 @@
 int main()
 {
 	int n,s,d,i;
+	printf("N:");
 	scanf("%d",&n);
+	printf("\nS:");
 	scanf("%d",&s);
+	printf("\nD:");
 	scanf("%d",&d);
 	for(i=0;i<n;i++)
 	{
