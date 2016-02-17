@@ -4,9 +4,9 @@ int main()
 	int n,s,d,i;
 	printf("N:");
 	scanf("%d",&n);
-	printf("\nS:");
+	printf("S:");
 	scanf("%d",&s);
-	printf("\nD:");
+	printf("D:");
 	scanf("%d",&d);
 	for(i=0;i<n;i++)
 	{
