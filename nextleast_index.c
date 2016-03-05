@@ -1,28 +1,24 @@
 #include<stdio.h>
 int get_index(int a[],int n,int num)
 {
-	int i,j;
-	int nextnum;
+	int i,ind=-1;
 	for(i=0;i<n;i++)
 	{
 		if(a[i]>num)
 		{
-			nextnum=a[i];
-			break;
+			if(a[i]<a[i+1])
+			{
+				ind=i;
+				break;
+			}
+			if(a[i]==a[i+1])
+			{
+				ind=i+1;
+				break;
+			}
 		}
 	}
-	for(j=i;j<n;j++)
-	{
-		if(a[j]>nextnum)
-		{
-			break;
-		}
-	}
-	if(j==n)
-	{
-		return -1;
-	}
-	return j;
+	return ind;
 }
 int main()
 {
