@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+int erow,ecol;
 void print(int array[][3])
 {
 	int i,j;
@@ -36,7 +37,7 @@ void findblank(int array[][3])
 		}
 	}
 }
-void swap(int erow,int ecol,char direction,int array[][3])
+void swap(char direction,int array[][3])
 {
 	int t,i,j;
 	switch(direction)
@@ -53,6 +54,7 @@ void swap(int erow,int ecol,char direction,int array[][3])
 		case 'R':i=erow;
 				 j=ecol+1;
 				 break;
+		default:printf("Enter the valid direction.....\n");
 	}
 	if((i!=-1)&&(i!=3)&&(j!=-1)&&(j!=3))
 	{
@@ -78,12 +80,12 @@ int check(int array[][3])
 					flag=1;
    	            			break;
 				}
-   	        	}
-   	        	else
-   	        	{
-   	            		flag=0;
-   	            		break;
-   	        	}
+  	       		}
+   		 	else
+   	       		{
+   	           		flag=0;
+   	           		break;
+   		  	}
 		}
 	}
 	return flag;
@@ -91,28 +93,42 @@ int check(int array[][3])
 int main()
 {
 	int array[3][3]={{1,2,3},{4,5,0},{7,8,6}};
-	int flag,erow,ecol;
-	char direction;
+	int flag;
+	char direction;		
+	print(array);
+	printf("Use UpperCase Only\n");
+	printf("U for Up,D for Down,L for Left,R for right,Q to quit\n");
+	printf("Enter the direction:\n");
+	direction = getchar();
+	getchar();
+		
 	do
 	{
+		if(direction=='Q')
+		{
+			printf("You Gave up");
+			return 0;
+		}
 		system("clear");
 		findblank(array);
-		swap(erow,ecol,direction,array);
+		swap(direction,array);
 		print(array);
-		printf("Use UpperCase Only\n");
-		printf("U for Up,D for Down,L for Left,R for right,Q to quit\n");
-		printf("Enter the direction:\n");
-		scanf("%c",&direction);
 		flag=check(array);
 		if(flag==1)
 		{
-			printf("Congrats!!You won :)");
-			break;
+			printf("\nCongrats!!You won :)\n");
+			return 0;
 		}
-	}while(direction!='Q');
-	if(direction=='Q')
-	{
-		printf("You Gave up");
-	}
+
+		printf("Use UpperCase Only\n");
+		printf("U for Up,D for Down,L for Left,R for right,Q to quit\n");
+		printf("Enter the direction:\n");
+		direction = getchar();
+		getchar();
+		
+		
+		
+	}while(1);
+	
 	return 0;
 }
